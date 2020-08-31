@@ -1,0 +1,39 @@
+{
+    "manifestVersion": 1,
+    "id": "camilov-extension",
+    "publisher": "CamiloRivera",
+    "version": "1.0.0",
+    "name": "My First Extension",
+    "description": "A sample Visual Studio Services extension",
+    "public": false,
+    "categories": ["Azure Repos"],
+    "targets": [
+        {
+            "id": "Microsoft.VisualStudio.Services"
+        }
+    ],
+    "contributions": [
+        {
+            "id": "my-hub",
+            "type": "ms.vss-web.hub",
+            "targets": [
+                "ms.vss-code-web.code-hub-group"
+            ],
+            "properties": {
+                "name": "My Hub",
+                "uri": "./dist/index.html"
+            }
+        }
+    ],
+    "files": [
+        {
+            "path": "./dist/index.html",
+            "addressable": true
+        },
+        {
+            "path": "node_modules/vss-web-extension-sdk/lib",
+            "addressable": true,
+            "packagePath": "lib"
+        }
+    ]
+}
